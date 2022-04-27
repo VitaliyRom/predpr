@@ -14,7 +14,7 @@ public class UserServiceTest {
     private final Byte testAge = 5;
 
 
-    @Test
+   @Test
     public void dropUsersTable() {
         try {
             userService.dropUsersTable();
@@ -40,7 +40,6 @@ public class UserServiceTest {
             userService.dropUsersTable();
             userService.createUsersTable();
             userService.saveUser(testName, testLastName, testAge);
-
             User user = userService.getAllUsers().get(0);
 
             if (!testName.equals(user.getName())
@@ -55,7 +54,7 @@ public class UserServiceTest {
         }
     }
 
-    @Test
+ @Test
     public void removeUserById() {
         try {
             userService.dropUsersTable();
@@ -83,7 +82,7 @@ public class UserServiceTest {
         }
     }
 
-    @Test
+      @Test
     public void cleanUsersTable() {
         try {
             userService.dropUsersTable();
